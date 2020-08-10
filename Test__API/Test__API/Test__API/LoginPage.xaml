@@ -1,0 +1,126 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:local1="clr-namespace:Test__API"
+             mc:Ignorable="d"
+             x:Class="Test__API.LoginPage"
+             Title="Log in">
+    <!--<StackLayout Orientation="Vertical">
+        --><!-- Place new controls here --><!--
+        <Label Text="Log in"
+               BackgroundColor="blue"    
+               HorizontalOptions="FillAndExpand"
+               VerticalOptions="Start" 
+               Padding="5" 
+               HeightRequest="50"
+               TextColor="White"
+               FontSize="Medium"
+               VerticalTextAlignment="Center"
+               />-->
+        <!--<StackLayout Margin="10">
+            <local:MyEntry Placeholder="Enter Password"/>
+        </StackLayout>-->
+
+        <Grid Margin="10">
+            <Grid.RowDefinitions>
+                <RowDefinition />
+                <RowDefinition />
+                <RowDefinition />
+                <RowDefinition />
+                <RowDefinition />
+                <RowDefinition />
+                <RowDefinition />
+                <RowDefinition />
+                <RowDefinition />
+                <RowDefinition />
+
+            </Grid.RowDefinitions>
+
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition />
+                <ColumnDefinition />
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+
+            <Label  
+                Grid.Row="0"
+                Grid.ColumnSpan="3"
+                Text="Log In to Your MMI Acount"  
+                HorizontalOptions="CenterAndExpand"
+                FontSize="Large"
+                FontAttributes="Bold"
+                TextColor="Black"/>
+
+            <Label  Grid.Row="2"
+                Grid.ColumnSpan="3"
+                Text="* Username"
+                FontSize="Medium"
+                TextColor="Black"/>
+
+            <local1:MyEntry Grid.Row="3"
+               Grid.ColumnSpan="3"
+               x:Name = "UserId" 
+               TextColor="Black"
+               Text="{Binding UserId}"    
+               
+               FontSize="Medium"
+               Keyboard = "Email"
+               />
+
+
+            <Label  Grid.Row="4"
+                Grid.ColumnSpan="3"
+                Text="* Password"
+               
+                FontSize="Medium"
+                TextColor="Black"/>
+
+            <local1:MyEntry 
+                Grid.Row="5"
+                Grid.ColumnSpan="3"
+                x:Name = "Password" 
+                TextColor="Black"
+                Text="{Binding Password}"    
+               
+                Keyboard = "Email">
+            </local1:MyEntry>
+
+            <Switch Grid.Row="6" 
+                Grid.Column="0"
+                HorizontalOptions="Start"
+                IsToggled="False"/>
+
+            <Label  Grid.Row="6"
+                Grid.Column="1"
+                Text="Remenber Me"
+                FontSize="Small"
+                HorizontalTextAlignment="Start"
+                VerticalTextAlignment="Center"
+                TextColor="Black"/>
+
+            <Label  Grid.Row="7"
+                Grid.ColumnSpan="3"
+                Text="Forgot Username"
+                FontSize="Small"
+                TextColor="Black"/>
+
+            <Label  Grid.Row="8"
+                Grid.ColumnSpan="3"
+                Text="Forgot Passsword"
+                FontSize="Small"
+                TextColor="Black"/>
+
+            <Button Grid.Row="9"
+                Grid.ColumnSpan="3"
+                x:Name= "Loginbtn"
+                Text = "Login "     
+                HorizontalOptions = "FillAndExpand"
+                VerticalOptions="End"
+                CornerRadius="10"
+                BackgroundColor="#ff8000"
+                Clicked="Loginbtn_Clicked"/>
+        </Grid>
+    <!--</StackLayout>-->
+</ContentPage>
